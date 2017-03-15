@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww19880\viewh12600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 OS platform: macOS Sierra 10.12.3\
+\
+Programming Language : Java\
+\
+Version : JDK 1.8\
+\
+Data Structure Used : HashMap\
+Maps are used when you want to associate a key with a value. \
+Map is an interface used in java Collection framework and HashMap is implementation of Map Interface\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 1. The ASCII character and their corresponding ASCII numbers 0 to 255 are initially stored in the hashmap<Integer, String> when the program runs.\
+2. Th advantage of using the hash map is it looks up the corresponding stored values in the constant time. Hence to have efficiency, I used HashMap for the LZW encoding and Decoding.\
+\
+\
+Input : \
+1. File should contain only ASCII characters between 0 and 255, as we have the hash map created for that particular range of ASCII values. \
+2. If the given input is not in that particular range, then output of error msg 'The input file should be in UTF-8 format' will be displayed.\
+3. The bit length should be passed as an input and it should be an appropriate integer. If not, the error msg 'Pass the correct input file and the bit length as the arguments' will be displayed.(should be greater than 8 for encoding to happen)\
+\
+\
+Environment Set Up\
+---------------------------\
+\
+1. There are two java files Encoder.java and Decoder.java attached.\
+2. The above files are compiled and run using the correct file input.txt which is in UTF-8 format for executing Encoder.java and input.lzw which is in binary format for executing Decoder.java\
+\
+\
+Instructions for Execution:\
+---------------------------\
+\
+Steps to run Encoder.java\
+1. In Command Prompt, go to the directory where Encoder.java is present\
+\
+2. Give this command to compile the java file:  javac Encoder.java\
+\
+3. Give this command to run the java file: java Encoder.java input1.txt 12\
+\
+4. input1.lzw binary file will be created in the same directory\
+\
+5. The binary file generated will not be in the human readable file, to check whether the binary format generated is correct or not, we can use the Decoder.java to decode the binary format. \
+\
+6. The other way to read the binary format is use any software. For example, Hex Editor Neo is used to view the binary file.\
+\
+The Encoder.java program fails when:\
+\
+1. The input1.txt is not given as input while running the program\
+Example: java Encoder.java  \'97\'97\'97> in this case, the input file is not passed\
+2. The bit length passed as an argument, is less than 9, the wrong results will be generated.\
+\
+\
+Steps to run Decoder.java  \
+1. In Command Prompt, move to the directory where Decoder.java is present \
+\
+2. Give this command to compile:  javac Decoder.java\
+\
+3. Give this command to run the java file: java Decoder.java input1.lzw 12\
+\
+4. input1_decoder.txt file will be created in the same directory\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 The Decoder.java program fails when:\
+\
+1. The input1.lzw is not given as input while running the program\
+Example: java Decoder.java  \'97\'97\'97> in this case, the input file is not passed\
+2. The bit length passed as an argument, is less than 9, the wrong results will be generated.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+------------------------------------------------------------------------------------------\
+\
+You can compare the size of the input1.txt, input1.lzw and input1_decoder.txt files.\
+\
+\
+\
+\
+Note: If you are running from Eclipse or any other IDE please check the input files are inside the project folder.\
+\
+\
+}
